@@ -6407,6 +6407,11 @@
   "resolved" "https://registry.npmjs.org/p-try/-/p-try-2.2.0.tgz"
   "version" "2.2.0"
 
+"package@^1.0.1":
+  "integrity" "sha1-0lofmeJQbcsn1nBLg9yooxLk7cw="
+  "resolved" "https://registry.npmjs.org/package/-/package-1.0.1.tgz"
+  "version" "1.0.1"
+
 "param-case@^3.0.4":
   "integrity" "sha512-RXlj7zCYokReqWpOPH9oYivUzLYZ5vAPIfEmCTNViosC78F8F0H9y7T7gG2M39ymgutxF5gcFEsyZQSph9Bp3A=="
   "resolved" "https://registry.npmjs.org/param-case/-/param-case-3.0.4.tgz"
