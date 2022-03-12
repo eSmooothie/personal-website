@@ -1,24 +1,9 @@
 import "../App.css";
 import React, { Component } from "react";
 import MediaQuery from 'react-responsive' // managing media query
-import logo from '../logo.svg';
-import { fadeOut, pulse, fadeIn } from 'react-animations';
-import Radium, {StyleRoot} from 'radium';
-
-const styles = {
-    pulse: {
-      animation: 'infinite 1.5s ease-out',
-      animationName: Radium.keyframes(pulse, 'pulse')
-    },
-    fadeOut: {
-        animation: '1s',
-        animationName: Radium.keyframes(fadeOut, 'fadeOut')
-    },
-    fadeIn: {
-        animation: '1s',
-        animationName: Radium.keyframes(fadeIn, 'fadeIn')
-    }
-  }
+import {StyleRoot} from 'radium';
+import logo_white from '../images/myLogo_w.png';
+import myAnimationStyles from "../constants/Animations";
 
 class Header extends Component{
     
@@ -53,10 +38,15 @@ class Header extends Component{
         
 
         return (
-            <div className="flex flex-wrap flex-row justify-between md:items-center md:space-x-4 bg-white py-6 px-6 relative border border-black min-w-full">
+            <div className="flex flex-wrap flex-row justify-between md:items-center md:space-x-4 bg-slate-700 py-6 px-6 relative border border-black min-w-full">
                 <div className="">
-                    <img src="https://github.com/eSmooothie/eSmooothie/blob/main/images/myLogo_b.png?raw=true" alt="logo" 
-                    className="sm:h-16 h-12"  style={styles.fadeIn}/>
+                    <StyleRoot>
+                        <a href="">
+                            <img src={logo_white} alt="logo" 
+                            className="sm:h-16 h-12"  style={myAnimationStyles.fadeIn}/>
+                        </a>   
+                    </StyleRoot>
+                                     
                 </div>
                 <MediaQuery maxWidth={426} onChange={handleMediaQueryChange}>
                     <button className="inline-block w-8 h-10 text-gray-600 p-1" onClick={this.showMenu}>
@@ -67,25 +57,29 @@ class Header extends Component{
                     {this.state.showMenu ? (
                     <nav className="  absolute space-y-4 top-28 left-0 z-20 flex flex-col font-semibold w-full bg-white 
                     shadow-md rounded-lg p-6 pt-0 font-mono">
-                        <a href="/" className=" hover:underline hover:text-indigo-600 active:text-indigo-600 text-gray-600">01. About Me</a>
-                        <a href="/" className=" hover:underline hover:text-indigo-600 active:text-indigo-600 text-gray-600">02. Experience</a>
-                        <a href="/" className=" hover:underline hover:text-indigo-600 active:text-indigo-600 text-gray-600">03. Projects</a>
-                        <a href="/" className=" hover:underline hover:text-indigo-600 active:text-indigo-600 text-gray-600">04. Achievements</a>
+                        <a href="/" className=" hover:underline hover:text-green-500 text-white">01. About Me</a>
+                        <a href="/" className=" hover:underline hover:text-green-500 text-white">02. Experience</a>
+                        <a href="/" className=" hover:underline hover:text-green-500 text-white">03. Projects</a>
+                        <a href="/" className=" hover:underline hover:text-green-500 text-white">04. Achievements</a>
                     </nav>
                     ):(
                         null
                     )}
                 </MediaQuery>
                 
-
-                <nav className="  hidden absolute sm:relative top-16 left-0 sm:top-0 z-20 sm:flex sm:flex-row sm:space-x-6 
-                font-semibold w-full sm:w-auto bg-white shadow-md rounded-lg sm:rounded-none sm:shadow-none sm:bg-transparent p-6 pt-0 sm:p-0 
-                font-mono">
-                    <a href="/" className=" hover:underline hover:text-indigo-600 active:text-indigo-600 text-gray-600">01. About Me</a>
-                    <a href="/" className=" hover:underline hover:text-indigo-600 active:text-indigo-600 text-gray-600">02. Experience</a>
-                    <a href="/" className=" hover:underline hover:text-indigo-600 active:text-indigo-600 text-gray-600">03. Projects</a>
-                    <a href="/" className=" hover:underline hover:text-indigo-600 active:text-indigo-600 text-gray-600">04. Achievements</a>
-                </nav>
+                <StyleRoot>
+                    <nav className="  hidden absolute sm:relative top-16 left-0 sm:top-0 z-20 sm:flex sm:flex-row sm:space-x-6
+                    font-semibold w-full sm:w-auto bg-white shadow-md rounded-lg sm:rounded-none sm:shadow-none sm:bg-transparent p-6 pt-0 sm:p-0 
+                    font-mono">
+                    
+                            <a href="/" className=" hover:underline hover:text-green-500 text-white" style={myAnimationStyles.fadeInDown}>01. About Me</a>
+                    
+                            <a href="/" className=" hover:underline hover:text-green-500  text-white" style={myAnimationStyles.fadeInDown}>02. Experience</a>
+                            <a href="/" className=" hover:underline hover:text-green-500  text-white" style={myAnimationStyles.fadeInDown}>03. Projects</a>
+                            <a href="/" className=" hover:underline hover:text-green-500  text-white" style={myAnimationStyles.fadeInDown}>04. Achievements</a>
+                                        
+                    </nav>
+                </StyleRoot>   
             </div>
         )
     }

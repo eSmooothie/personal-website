@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import { fadeOut, pulse } from 'react-animations';
 import Radium, {StyleRoot} from 'radium';
 import intro_gif from "../images/intro.gif";
+import ContentPage from "../components/Content";
 
 const styles = {
     pulse: {
@@ -48,15 +49,20 @@ class Loading extends React.Component{
   
     render(){
         return (
-            this.state.isLoading ? 
+            // this.state.isLoading ?
+            false ? 
                 <StyleRoot><div className=" bg-slate-700 container min-h-screen grid place-items-center overflow-hidden min-w-full" 
                     style={this.state.isPulse? null : styles.fadeOut}>
                     <div className="">
                         <img src={this.state.loaded_gif + "?a=" + Math.random()} alt="logo" 
                             className=" h-32"/>
                     </div>
-                </div></StyleRoot>: 
-                 <Header></Header>
+                </div></StyleRoot>:
+                <section>
+                    <Header></Header>
+                    <ContentPage></ContentPage>
+                </section>
+                 
                
         )
     }
