@@ -3,6 +3,7 @@ import React from "react";
 import Header from '../components/Header';
 import { fadeOut, pulse } from 'react-animations';
 import Radium, {StyleRoot} from 'radium';
+import intro_gif from "../images/intro.gif";
 
 const styles = {
     pulse: {
@@ -22,11 +23,13 @@ class Loading extends React.Component{
         this.state = {
             isLoading: true,
             isPulse: true,
+            gif: intro_gif,
+            loaded_gif : intro_gif,
         };
     }
 
     componentDidMount(){
-        let wait_time = 4000;
+        let wait_time = 3300;
         
         // loading
         setTimeout(function(){
@@ -38,20 +41,19 @@ class Loading extends React.Component{
         // fade out
         setTimeout(function(){
             this.setState({
-                // isPulse: false
+                isPulse: false
             });
-        }.bind(this), wait_time - 1);
+        }.bind(this), wait_time - 1000);
     }
-
+  
     render(){
         return (
-            
             this.state.isLoading ? 
                 <StyleRoot><div className=" bg-slate-700 container min-h-screen grid place-items-center overflow-hidden min-w-full" 
                     style={this.state.isPulse? null : styles.fadeOut}>
                     <div className="">
-                        <img src="https://github.com/eSmooothie/eSmooothie/blob/main/images/myLogo_w.png?raw=true" alt="logo" 
-                            className=" h-64"/>
+                        <img src={this.state.loaded_gif + "?a=" + Math.random()} alt="logo" 
+                            className=" h-32"/>
                     </div>
                 </div></StyleRoot>: 
                  <Header></Header>
