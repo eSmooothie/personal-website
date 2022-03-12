@@ -1,3 +1,12 @@
+/* League */
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap'); 
+/* Staatliches */
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -17,6 +26,3 @@ code {
     monospace;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

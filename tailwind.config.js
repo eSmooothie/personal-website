@@ -4,7 +4,15 @@ module.exports = {
     "./src/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        'league' : ['"League Gothic"', 'sans-serif'],
+        'staatliches': ['Staatliches', 'sans-serif'],
+      },
+      colors:{
+        'dark-blue': '#142850',
+      }
+    },
   },
   plugins: [],
 }

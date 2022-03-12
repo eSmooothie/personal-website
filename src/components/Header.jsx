@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import MediaQuery from 'react-responsive' // managing media query
 import {StyleRoot} from 'radium';
 import logo_white from '../images/myLogo_w.png';
-import myAnimationStyles from "../constants/Animations";
+import myAnimationStyles, {animationFadeInDown} from "../constants/Animations";
 
 class Header extends Component{
     
@@ -38,7 +38,7 @@ class Header extends Component{
         
 
         return (
-            <div className="flex flex-wrap flex-row justify-between md:items-center md:space-x-4 bg-slate-700 py-6 px-6 relative border border-black min-w-full">
+            <div className="flex flex-wrap flex-row justify-between md:items-center md:space-x-4 bg-dark-blue py-6 px-6 relative min-w-full">
                 <div className="">
                     <StyleRoot>
                         <a href="">
@@ -55,12 +55,12 @@ class Header extends Component{
                         </svg>
                     </button>
                     {this.state.showMenu ? (
-                    <nav className="  absolute space-y-4 top-28 left-0 z-20 flex flex-col font-semibold w-full bg-white 
-                    shadow-md rounded-lg p-6 pt-0 font-mono">
-                        <a href="/" className=" hover:underline hover:text-green-500 text-white">01. About Me</a>
-                        <a href="/" className=" hover:underline hover:text-green-500 text-white">02. Experience</a>
-                        <a href="/" className=" hover:underline hover:text-green-500 text-white">03. Projects</a>
-                        <a href="/" className=" hover:underline hover:text-green-500 text-white">04. Achievements</a>
+                    <nav className="  absolute space-y-4 top-20 left-0 z-20 flex flex-col font-semibold w-full bg-blue-900
+                    shadow-md rounded-b-lg p-6 pt-5 font-mono">
+                        <a href="/" className=" hover:underline hover:text-green-500 "><span className=" text-green-400">01.</span> About Me</a>
+                        <a href="/" className=" hover:underline hover:text-green-500 "><span className=" text-green-400">02.</span>  Experience</a>
+                        <a href="/" className=" hover:underline hover:text-green-500 "><span className=" text-green-400">03.</span>  Projects</a>
+                        <a href="/" className=" hover:underline hover:text-green-500 "><span className=" text-green-400">04.</span>  Achievements</a>
                     </nav>
                     ):(
                         null
@@ -70,13 +70,21 @@ class Header extends Component{
                 <StyleRoot>
                     <nav className="  hidden absolute sm:relative top-16 left-0 sm:top-0 z-20 sm:flex sm:flex-row sm:space-x-6
                     font-semibold w-full sm:w-auto bg-white shadow-md rounded-lg sm:rounded-none sm:shadow-none sm:bg-transparent p-6 pt-0 sm:p-0 
-                    font-mono">
+                    font-mono text-gray-200">
                     
-                            <a href="/" className=" hover:underline hover:text-green-500 text-white" style={myAnimationStyles.fadeInDown}>01. About Me</a>
+                        <a href="/" className=" hover:text-green-500 " style={animationFadeInDown._500ms}>
+                            <span className=" text-green-400">01.</span> About Me
+                            </a>
                     
-                            <a href="/" className=" hover:underline hover:text-green-500  text-white" style={myAnimationStyles.fadeInDown}>02. Experience</a>
-                            <a href="/" className=" hover:underline hover:text-green-500  text-white" style={myAnimationStyles.fadeInDown}>03. Projects</a>
-                            <a href="/" className=" hover:underline hover:text-green-500  text-white" style={myAnimationStyles.fadeInDown}>04. Achievements</a>
+                        <a href="/" className=" hover:text-green-500  " style={animationFadeInDown._1s}>
+                            <span className=" text-green-400">02.</span> Experience
+                            </a>
+                        <a href="/" className=" hover:text-green-500  " style={animationFadeInDown._1500ms}>
+                            <span className=" text-green-400">03.</span> Projects
+                            </a>
+                        <a href="/" className=" hover:text-green-500  " style={animationFadeInDown._2000ms}>
+                            <span className=" text-green-400">04.</span> Achievements
+                            </a>
                                         
                     </nav>
                 </StyleRoot>   
