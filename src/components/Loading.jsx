@@ -29,7 +29,7 @@ class Loading extends React.Component{
     }
 
     componentDidMount(){
-        let wait_time = 3300;
+        let wait_time = 4300;
         
         // loading
         setTimeout(function(){
