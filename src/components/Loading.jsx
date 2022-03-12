@@ -38,19 +38,20 @@ class Loading extends React.Component{
         // fade out
         setTimeout(function(){
             this.setState({
-                isPulse: false
+                // isPulse: false
             });
         }.bind(this), wait_time - 1);
     }
 
     render(){
         return (
+            
             this.state.isLoading ? 
-                <StyleRoot><div className=" bg-slate-700 container min-h-screen grid place-items-center overflow-hidden" 
+                <StyleRoot><div className=" bg-slate-700 container min-h-screen grid place-items-center overflow-hidden min-w-full" 
                     style={this.state.isPulse? null : styles.fadeOut}>
                     <div className="">
-                        <img src="https://github.com/eSmooothie/eSmooothie/blob/main/images/godot_engine.png?raw=true" alt="logo" 
-                            className=" h-32"/>
+                        <img src="https://github.com/eSmooothie/eSmooothie/blob/main/images/myLogo_w.png?raw=true" alt="logo" 
+                            className=" h-64"/>
                     </div>
                 </div></StyleRoot>: 
                  <Header></Header>
