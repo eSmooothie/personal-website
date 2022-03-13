@@ -49,9 +49,9 @@ class Loading extends React.Component{
   
     render(){
         return (
-            // this.state.isLoading ?
-            false ? 
-                <StyleRoot><div className=" bg-slate-700 container min-h-screen grid place-items-center overflow-hidden min-w-full" 
+            this.state.isLoading ?
+            // false ? 
+                <StyleRoot><div className=" bg-dark-blue container min-h-screen grid place-items-center overflow-hidden min-w-full" 
                     style={this.state.isPulse? null : styles.fadeOut}>
                     <div className="">
                         <img src={this.state.loaded_gif + "?a=" + Math.random()} alt="logo" 
