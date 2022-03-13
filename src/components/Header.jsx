@@ -50,7 +50,7 @@ class Header extends Component{
                                      
                 </div>
                 <MediaQuery maxWidth={426} onChange={handleMediaQueryChange}>
-                    <button className="inline-block w-8 h-10 text-gray-600 p-1 " onClick={this.showMenu}>
+                    <button className="inline-block w-8 h-10 text-white p-1 " onClick={this.showMenu}>
                         <FontAwesomeIcon icon="fa-solid fa-bars" />
                     </button>
                     {this.state.showMenu ? (
@@ -72,17 +72,17 @@ class Header extends Component{
                         font-semibold w-full sm:w-auto bg-white shadow-md rounded-lg sm:rounded-none sm:shadow-none sm:bg-transparent p-6 pt-0 sm:p-0 
                         font-mono text-gray-200">
                         
-                            <a href="#" className=" hover:text-green-500 " style={animationFadeInDown._500ms}>
+                            <a href="#" className=" hover:text-green-500 " style={animationFadeInDown._200ms}>
                                 <span className=" text-green-400">01.</span> About Me
                                 </a>
                         
-                            <a href="#" className=" hover:text-green-500  " style={animationFadeInDown._1s}>
+                            <a href="#" className=" hover:text-green-500  " style={animationFadeInDown._300ms}>
                                 <span className=" text-green-400">02.</span> Experience
                                 </a>
-                            <a href="#" className=" hover:text-green-500  " style={animationFadeInDown._1500ms}>
+                            <a href="#" className=" hover:text-green-500  " style={animationFadeInDown._400ms}>
                                 <span className=" text-green-400">03.</span> Projects
                                 </a>
-                            <a href="#" className=" hover:text-green-500  " style={animationFadeInDown._2000ms}>
+                            <a href="#" className=" hover:text-green-500  " style={animationFadeInDown._500ms}>
                                 <span className=" text-green-400">04.</span> Achievements
                                 </a>
                                             
