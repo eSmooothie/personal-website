@@ -20,25 +20,31 @@ class ContentPage extends React.Component{
                                 <FontAwesomeIcon icon="fa-brands fa-github-alt" size='2x' className=""/>
                             </a>
                             {/* linkedIn */}
-                            <a href="https://www.linkedin.com/in/sherwin-sandoval/" target={'_blank'} className=' text-center hover:text-green-500  w-10' style={animationFadeInLeft._1000ms}>
+                            <a href="https://www.linkedin.com/in/sherwin-sandoval/" target={'_blank'} className=' text-center hover:text-green-500  w-10' style={animationFadeInLeft._650ms}>
                                 <FontAwesomeIcon icon="fa-brands fa-linkedin" size='2x' className=""/>
                             </a>
                             {/* messenger */}
-                            <a href="https://m.me/eSmooothieee" target={'_blank'} className=' text-center hover:text-green-500  w-10' style={animationFadeInLeft._1500ms}>
+                            <a href="mailto:sherwin.sandoval026@gmail.com" target={'_blank'} className=' text-center hover:text-green-500  w-10' style={animationFadeInLeft._750ms}>
+                                <FontAwesomeIcon icon="fa-solid fa-at" size='2x' className=""/>
+                            </a>  
+                            {/* messenger */}
+                            <a href="https://m.me/eSmooothieee" target={'_blank'} className=' text-center hover:text-green-500  w-10' style={animationFadeInLeft._850ms}>
                                 <FontAwesomeIcon icon="fa-brands fa-facebook-messenger" size='2x' className=""/>
                             </a>                        
                         </div>
                     </aside>
                 </StyleRoot>
                 <StyleRoot>
-                    <section className="  md:px-24 px-3 font-staatliches pt-10 min-h-screen overflow-x-hidden">
+                    <section className="  md:px-24 px-3 font-staatliches pt-1 min-h-screen overflow-x-hidden">
                         {/* Intro */}
-                        <div className=" relative top-14 xl:left-[22%] lg:left-[20%] left-4 ">
+                        <div className=" relative top-9 xl:left-[22%] lg:left-[20%] left-10">
                             <p className=" text-green-400 text-3xl" style={animationFadeIn._1000ms}>Hi! I'm</p>
-                            <p className=" text-gray-200 sm:text-9xl text-5xl" style={animationFadeIn._1000ms}>SHERWIN SANDOVAL</p>
+                            <p className=" text-gray-200 sm:text-9xl text-7xl xl:text-10xl" style={animationFadeIn._1000ms}>SHERWIN<br />SANDOVAL</p>
 
-                            <article className=" text-gray-400 sm:text-xl" style={animationFadeIn._1000ms}>
-                                SHORT DESCRIPTION
+                            <article className=" text-gray-400 sm:text-xl xl:w-1/2 lg:w-4/6 md:w-5/6 w-9/12 text-justify" style={animationFadeIn._1000ms}>
+                            I am ambitious and motivated. Constantly set goals for myself, 
+                            so I have something to strive toward. I`m not comfortable with settling,
+                             and I'm always looking for an opportunity to do better and achieve greatness.
                             </article>
                         </div>
                         {/* About Me */}

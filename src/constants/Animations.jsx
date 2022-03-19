@@ -282,11 +282,23 @@ export const animationFadeInLeft = {
         animationName: Radium.keyframes(fadeInLeft, 'fadeInLeft')
     },
     _600ms: {
-        animation: '500ms linear',
+        animation: '600ms linear',
+        animationName: Radium.keyframes(fadeInLeft, 'fadeInLeft')
+    },
+    _650ms: {
+        animation: '650ms linear',
         animationName: Radium.keyframes(fadeInLeft, 'fadeInLeft')
     },
     _700ms: {
-        animation: '500ms linear',
+        animation: '700ms linear',
+        animationName: Radium.keyframes(fadeInLeft, 'fadeInLeft')
+    },
+    _750ms: {
+        animation: '750ms linear',
+        animationName: Radium.keyframes(fadeInLeft, 'fadeInLeft')
+    },
+    _850ms: {
+        animation: '850ms linear',
         animationName: Radium.keyframes(fadeInLeft, 'fadeInLeft')
     },
     _1000ms: {

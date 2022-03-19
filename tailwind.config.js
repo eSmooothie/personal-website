@@ -11,7 +11,10 @@ module.exports = {
       },
       colors:{
         'dark-blue': '#142850',
-      }
+      },
+      fontSize:{
+        '10xl': '10rem',
+      },
     },
   },
   plugins: [],

@@ -39,12 +39,12 @@ class Header extends Component{
         
 
         return (
-            <div className="flex flex-row justify-between items-center md:space-x-4 bg-dark-blue py-6 px-6 relative w-full border border-white">
+            <div className="flex flex-row justify-between items-center md:space-x-4 bg-dark-blue py-6 px-6 relative w-full">
                 <div className="">
                     <StyleRoot>
-                        <a href="#">
+                        <a href="#" className="">
                             <img src={logo_white} alt="logo" 
-                            className="sm:h-16 h-12"  style={myAnimationStyles.fadeIn}/>
+                             className="sm:h-16 h-12" style={myAnimationStyles.fadeIn}/>
                         </a>   
                     </StyleRoot>
                                      
@@ -85,7 +85,6 @@ class Header extends Component{
                             <a href="#" className=" hover:text-green-500  " style={animationFadeInDown._500ms}>
                                 <span className=" text-green-400">04.</span> Achievements
                                 </a>
-                                            
                         </nav>
                     </StyleRoot> 
                 </MediaQuery>
