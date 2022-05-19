@@ -42,10 +42,8 @@ class Header extends Component{
             <div className="flex flex-row justify-between items-center md:space-x-4 bg-dark-blue py-6 px-6 relative w-full">
                 <div className="">
                     <StyleRoot>
-                        <a href="#" className="">
-                            <img src={logo_white} alt="logo" 
-                             className="sm:h-16 h-12" style={myAnimationStyles.fadeIn}/>
-                        </a>   
+                        <img src={logo_white} alt="logo" 
+                            className="sm:h-16 h-12" style={myAnimationStyles.fadeIn}/>
                     </StyleRoot>
                                      
                 </div>

@@ -3,8 +3,55 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {StyleRoot} from 'radium';
 import {animationFadeInLeft, animationFadeInUp, animationFadeIn} from '../constants/Animations';
+
+function MyIntroduction(){
+    return <StyleRoot>
+        <section className="  md:px-24 px-3 font-staatliches pt-1 min-h-screen overflow-x-hidden border border-white">
+            {/* Intro */}
+            <div className=" relative top-9 xl:left-[22%] lg:left-[20%] left-10">
+                <p className=" text-green-400 text-3xl" style={animationFadeIn._1000ms}>Hi! I'm</p>
+                <p className=" text-gray-200 sm:text-9xl text-7xl xl:text-10xl" style={animationFadeIn._1000ms}>SHERWIN<br />SANDOVAL</p>
+
+                <article className=" text-gray-400 sm:text-xl xl:w-1/2 lg:w-4/6 md:w-5/6 w-9/12 text-justify" style={animationFadeIn._1000ms}>
+                I am ambitious and motivated. Constantly set goals for myself, 
+                so I have something to strive toward. I`m not comfortable with settling,
+                and I'm always looking for an opportunity to do better and achieve greatness.
+                </article>
+            </div>
+            {/* About Me */}
+        </section>
+    </StyleRoot>
+}
+
+// Displays about section
+function AboutMyself(){
+    return <StyleRoot>
+    <section id="about_me" className="  md:px-24 px-3 font-staatliches pt-1 min-h-screen overflow-x-hidden border border-white">
+        <div className=" relative top-9 xl:left-[22%] lg:left-[20%] left-10">
+            <article className=" text-gray-400 sm:text-xl xl:w-1/2 lg:w-4/6 md:w-5/6 w-9/12 text-justify" style={animationFadeIn._1000ms}>
+                About mE!
+            </article>
+        </div>
+    </section>
+</StyleRoot>
+}
+
+// Displays about section
+function MyExperience(){
+    return <StyleRoot>
+    <section id="about_me" className="  md:px-24 px-3 font-staatliches pt-1 min-h-screen overflow-x-hidden border border-white">
+        <div className=" relative top-9 xl:left-[22%] lg:left-[20%] left-10">
+            <article className=" text-gray-400 sm:text-xl xl:w-1/2 lg:w-4/6 md:w-5/6 w-9/12 text-justify" style={animationFadeIn._1000ms}>
+                Experience
+            </article>
+        </div>
+    </section>
+</StyleRoot>
+}
+
 class ContentPage extends React.Component{
 
+    
 
     render(){
         return(
@@ -34,23 +81,9 @@ class ContentPage extends React.Component{
                         </div>
                     </aside>
                 </StyleRoot>
-                <StyleRoot>
-                    <section className="  md:px-24 px-3 font-staatliches pt-1 min-h-screen overflow-x-hidden">
-                        {/* Intro */}
-                        <div className=" relative top-9 xl:left-[22%] lg:left-[20%] left-10">
-                            <p className=" text-green-400 text-3xl" style={animationFadeIn._1000ms}>Hi! I'm</p>
-                            <p className=" text-gray-200 sm:text-9xl text-7xl xl:text-10xl" style={animationFadeIn._1000ms}>SHERWIN<br />SANDOVAL</p>
-
-                            <article className=" text-gray-400 sm:text-xl xl:w-1/2 lg:w-4/6 md:w-5/6 w-9/12 text-justify" style={animationFadeIn._1000ms}>
-                            I am ambitious and motivated. Constantly set goals for myself, 
-                            so I have something to strive toward. I`m not comfortable with settling,
-                             and I'm always looking for an opportunity to do better and achieve greatness.
-                            </article>
-                        </div>
-                        {/* About Me */}
-                    </section>
-                </StyleRoot>
-                
+                <MyIntroduction />
+                <AboutMyself />
+                <MyExperience />
             </section>
         )
     }
