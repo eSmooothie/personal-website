@@ -81,7 +81,7 @@ class Header extends Component{
                                 <span className=" text-green-400">03.</span> Projects
                                 </a>
                             <a href="#" className=" hover:text-green-500  " style={animationFadeInDown._500ms}>
-                                <span className=" text-green-400">04.</span> Achievements
+                                <span className=" text-green-400">04.</span> Others
                                 </a>
                         </nav>
                     </StyleRoot> 
