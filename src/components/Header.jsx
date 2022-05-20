@@ -4,7 +4,8 @@ import MediaQuery from 'react-responsive' // managing media query
 import {StyleRoot} from 'radium';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logo_white from '../images/myLogo_w.png';
-import myAnimationStyles, {animationFadeInDown} from "../constants/Animations";
+import myAnimationStyles from "../constants/Animations";
+import { Link } from "react-scroll";
 
 class Header extends Component{
     
@@ -54,10 +55,29 @@ class Header extends Component{
                     {this.state.showMenu ? (
                     <nav className="   absolute space-y-4 top-20 left-0 z-20 flex flex-col font-semibold w-full
                     shadow-md rounded-b-lg p-6 pt-5 font-mono bg-gradient-to-b from-dark-blue to-blue-900 drop-shadow-xl">
-                        <a href="#" className=" hover:underline hover:text-green-500 text-white"><span className=" text-green-400">01.</span> About Me</a>
-                        <a href="#" className=" hover:underline hover:text-green-500 text-white"><span className=" text-green-400">02.</span> Experience</a>
-                        <a href="#" className=" hover:underline hover:text-green-500 text-white"><span className=" text-green-400">03.</span> Projects</a>
-                        <a href="#" className=" hover:underline hover:text-green-500 text-white"><span className=" text-green-400">04.</span> Achievements</a>
+                        
+                        <Link
+                            to="about_me"
+                            smooth={true}
+                            className="hover:text-green-500 cursor-pointer text-white"
+                        ><span className=" text-green-400">01.</span> About Me</Link>
+
+                        <Link
+                            to="my_work_experience"
+                            smooth={true}
+                            className="hover:text-green-500 cursor-pointer text-white"
+                        ><span className=" text-green-400">02.</span> Experience</Link>
+                        <Link
+                            to="my_projects"
+                            smooth={true}
+                            className="hover:text-green-500 cursor-pointer text-white"
+                        ><span className=" text-green-400">03.</span> Projects</Link>
+
+                        <Link
+                            to="#"
+                            smooth={true}
+                            className="hover:text-green-500 cursor-pointer text-white"
+                        ><span className=" text-green-400">04.</span> More</Link>
                     </nav>
                     ):(
                         null
@@ -69,20 +89,30 @@ class Header extends Component{
                         <nav className="   hidden absolute sm:relative top-16 left-0 sm:top-0 z-20 sm:flex sm:flex-row sm:space-x-6
                         font-semibold w-full sm:w-auto bg-white shadow-md rounded-lg sm:rounded-none sm:shadow-none sm:bg-transparent p-6 pt-0 sm:p-0 
                         font-mono text-gray-200">
-                        
-                            <a href="#" className=" hover:text-green-500 " style={animationFadeInDown._200ms}>
-                                <span className=" text-green-400">01.</span> About Me
-                                </a>
-                        
-                            <a href="#" className=" hover:text-green-500  " style={animationFadeInDown._300ms}>
-                                <span className=" text-green-400">02.</span> Experience
-                                </a>
-                            <a href="#" className=" hover:text-green-500  " style={animationFadeInDown._400ms}>
-                                <span className=" text-green-400">03.</span> Projects
-                                </a>
-                            <a href="#" className=" hover:text-green-500  " style={animationFadeInDown._500ms}>
-                                <span className=" text-green-400">04.</span> Others
-                                </a>
+                            
+                            <Link
+                                to="about_me"
+                                smooth={true}
+                                className="hover:text-green-500 cursor-pointer"
+                            ><span className=" text-green-400">01.</span> About Me</Link>
+
+                            <Link
+                                to="my_work_experience"
+                                smooth={true}
+                                className="hover:text-green-500 cursor-pointer"
+                            ><span className=" text-green-400">02.</span> Experience</Link>
+                            <Link
+                                to="my_projects"
+                                smooth={true}
+                                className="hover:text-green-500 cursor-pointer"
+                            ><span className=" text-green-400">03.</span> Projects</Link>
+
+                            <Link
+                                to="#"
+                                smooth={true}
+                                className="hover:text-green-500 cursor-pointer"
+                            ><span className=" text-green-400">04.</span> More</Link>
+                            
                         </nav>
                     </StyleRoot> 
                 </MediaQuery>

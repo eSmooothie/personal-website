@@ -1,7 +1,6 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {StyleRoot} from 'radium';
-import {animationFadeInLeft, animationFadeInUp, animationFadeIn} from '../../constants/Animations';
+import {animationFadeIn} from '../../constants/Animations';
 
 
 class IntroductionSection extends React.Component{
