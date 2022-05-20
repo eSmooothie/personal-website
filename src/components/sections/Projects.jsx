@@ -16,6 +16,10 @@ function ProjectHolder(props){
 }
 
 class ProjectsSection extends React.Component{
+    componentDidMount(){
+        console.log("Projects section mounted");
+    }
+
     render(){
         var show_border = (this.props.debug)? "border border-white":"";
         return(

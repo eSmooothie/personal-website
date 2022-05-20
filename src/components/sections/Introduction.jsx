@@ -4,6 +4,10 @@ import {animationFadeIn} from '../../constants/Animations';
 
 
 class IntroductionSection extends React.Component{
+    componentDidMount(){
+        console.log("Intro section mounted");
+    }
+
     render(){
         var show_border = (this.props.debug)? " border border-white":"";
         return (

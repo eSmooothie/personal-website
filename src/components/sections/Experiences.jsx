@@ -14,6 +14,10 @@ function WorkExperienceHolder(props){
 }
 
 class ExperienceSection extends React.Component{
+    componentDidMount(){
+        console.log("Work experience section mounted");
+    }
+
     render(){
         var show_border = (this.props.debug)? "border border-white":"";
         return(

@@ -22,8 +22,6 @@ class Header extends Component{
     showMenu(event){
         event.preventDefault();
 
-        
-
         this.setState(prevState => ({
             showMenu: !prevState.showMenu
         }));
@@ -40,7 +38,7 @@ class Header extends Component{
         
 
         return (
-            <div className="flex flex-row justify-between items-center md:space-x-4 bg-dark-blue py-6 px-6 relative w-full">
+            <div id="header" className="flex flex-row justify-between items-center md:space-x-4 bg-dark-blue py-6 px-6 relative w-full">
                 <div className="">
                     <StyleRoot>
                         <img src={logo_white} alt="logo" 

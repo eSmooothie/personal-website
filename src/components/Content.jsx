@@ -1,5 +1,5 @@
 import "../App.css";
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {StyleRoot} from 'radium';
 import {animationFadeInLeft, animationFadeInUp, animationFadeIn} from '../constants/Animations';
@@ -7,17 +7,10 @@ import ExperienceSection from "./sections/Experiences";
 import AboutSection from "./sections/About";
 import IntroductionSection from "./sections/Introduction";
 import ProjectsSection from "./sections/Projects";
-import { LoremGenerateParagraphs, LoremGenerateSetences } from "../constants/Util";
-
+import { LoremGenerateSetences } from "../constants/Util";
+import { Link } from "react-scroll";
 // list of companies I worked
 const list_companies = [
-    {
-        "company_name" : "Google ",
-        "start_date" : "Jan 2023",
-        "end_date" : "Present",
-        "position" : "Software Engineer I",
-        "img_link" : "https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png",
-    },
     {
         "company_name" : "FactSet Inc.",
         "start_date" : "Feb 2022",
@@ -82,10 +75,43 @@ const projects = [
         ],
     },
 ]
+
+function ScrollUp(){
+    const [scrollPosition, setScrollPosition] = useState(0);
+    const handleScroll = () => {
+        const position = window.pageYOffset;
+        setScrollPosition(position);
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+        window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    var scroll_up_visible = (scrollPosition > 600)? " sm:block" : "";
+
+    return (<aside className={" w-28 min-h-screen bottom-0 right-0 hidden sm:fixed" + scroll_up_visible}>
+        <div className="min-h-screen flex flex-col justify-end items-start pb-8">
+            <Link
+                to="header"
+                smooth={true}
+                className="hover:text-green-500 cursor-pointer text-white"
+            >
+                <FontAwesomeIcon icon="fa-solid fa-circle-up" size='2x'/>
+            </Link>
+        </div>
+        </aside>);
+}
 class ContentPage extends React.Component{
+
     render(){
+        
         return(
             <section>
+               
                 <StyleRoot>
                     <aside className=" w-16 min-h-screen bottom-0 hidden sm:block sm:fixed">
                         <div className=' flex flex-col min-h-screen justify-center space-y-6 text-gray-200 items-center'>
@@ -110,11 +136,12 @@ class ContentPage extends React.Component{
                             </a>                        
                         </div>
                     </aside>
+                    <ScrollUp />
                 </StyleRoot>
                 <IntroductionSection debug={false}/>
-                <AboutSection debug={true}/>
-                <ExperienceSection workExperience={list_companies} debug={true}/>
-                <ProjectsSection debug={true} projects={projects}/>
+                <AboutSection debug={false}/>
+                <ExperienceSection workExperience={list_companies} debug={false}/>
+                <ProjectsSection debug={false} projects={projects}/>
             </section>
         )
     }
