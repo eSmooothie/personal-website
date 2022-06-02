@@ -1,5 +1,6 @@
 # My Personal Website
 
+[Website Link](https://esmooothie.github.io/personal-website/)
 ### Getting started
 
 Run `npm install` to install the dependencies
