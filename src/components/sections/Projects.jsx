@@ -10,7 +10,7 @@ function ProjectHolder(props){
         <p className="text-xl">{props.type} PROJECT</p>
         <p className="text-base mb-3">{props.techStack.join(",  ")}</p>
         <div className=" flex justify-end">
-            <button className=" text-yellow-400 hover:text-yellow-600">View Full Details</button>
+            {/** <button className=" text-yellow-400 hover:text-yellow-600">View Full Details</button> */}
         </div>
     </article>
 }
