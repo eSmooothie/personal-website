@@ -71,11 +71,12 @@ class Header extends Component{
                             className="hover:text-green-500 cursor-pointer text-white"
                         ><span className=" text-green-400">03.</span> Projects</Link>
 
-                        <Link
-                            to="more"
-                            smooth={true}
-                            className="hover:text-green-500 cursor-pointer text-white"
-                        ><span className=" text-green-400">04.</span> More</Link>
+                        <a href="../assets/sherwin_sandoval_resume.pdf" className=" cursor-pointer border border-green-400 
+                            rounded-md px-3 py-2 hover:ring-2 ring-white">
+                            <span className=" text-green-400 ">
+                                <FontAwesomeIcon icon="fa-solid fa-file-arrow-down" />
+                            </span> Resume
+                        </a>
                     </nav>
                     ):(
                         null
@@ -85,8 +86,9 @@ class Header extends Component{
                 <MediaQuery minWidth={427}>
                     <StyleRoot>
                         <nav className="   hidden absolute sm:relative top-16 left-0 sm:top-0 z-20 sm:flex sm:flex-row sm:space-x-6
-                        font-semibold w-full sm:w-auto bg-white shadow-md rounded-lg sm:rounded-none sm:shadow-none sm:bg-transparent p-6 pt-0 sm:p-0 
-                        font-mono text-gray-200">
+                        font-semibold w-full sm:w-auto bg-white shadow-md rounded-lg 
+                        sm:rounded-none sm:shadow-none sm:bg-transparent p-6 pt-0 sm:p-0 
+                        font-mono text-gray-200 sm:items-center">
                             
                             <Link
                                 to="about_me"
@@ -105,12 +107,12 @@ class Header extends Component{
                                 className="hover:text-green-500 cursor-pointer"
                             ><span className=" text-green-400">03.</span> Projects</Link>
 
-                            <Link
-                                to="more"
-                                smooth={true}
-                                className="hover:text-green-500 cursor-pointer"
-                            ><span className=" text-green-400">04.</span> More</Link>
-                            
+                            <a href="../assets/sherwin_sandoval_resume.pdf" className=" cursor-pointer border border-green-400 
+                                rounded-md px-3 py-2 hover:ring-2 ring-white" download>
+                                <span className=" text-green-400 ">
+                                    <FontAwesomeIcon icon="fa-solid fa-file-arrow-down" />
+                                </span> Resume
+                            </a>
                         </nav>
                     </StyleRoot> 
                 </MediaQuery>

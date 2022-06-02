@@ -77,7 +77,6 @@ const LazyIntroductionSection = React.lazy(() => import('./sections/Introduction
 const LazyAboutSection = React.lazy(() => import('./sections/About'));
 const LazyExperienceSection = React.lazy(() => import('./sections/Experiences'));
 const LazyProjectsSection = React.lazy(() => import('./sections/Projects'));
-const LazyMoreSection = React.lazy(() => import('./sections/More'));
 
 function ScrollUp(){
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -141,12 +140,11 @@ class ContentPage extends React.Component{
                     </aside>
                     <ScrollUp />
                 </StyleRoot>
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={<div></div>}>
                     <LazyIntroductionSection debug={false}/>
                     <LazyAboutSection debug={false}/>
                     <LazyExperienceSection workExperience={list_companies} debug={false}/>
                     <LazyProjectsSection debug={false} projects={projects}/>
-                    <LazyMoreSection debug={false}/>
                 </Suspense>
                 
             </section>
