@@ -19,18 +19,18 @@ class AboutSection extends React.Component{
                         <div className={" grid grid-cols-3"  + show_border}>
                             <article className={" text-gray-400 sm:text-xl text-justify col-span-2 pr-4"  + show_border} 
                             style={animationFadeIn._1000ms}>
-                                <p>To get you to know me better, I’m a graduate of BS in Information Technology 
-                                    at Mindanao State University Iligan Institute of Technology with flying colors. 
+                                <p>
+                                    To get you to know me better, I’m a graduate of BS in Information Technology at 
+                                    Mindanao State University Iligan Institute of Technology with latin honors. 
                                     You always found me in front of a computer - coding, playing, watching videos, 
-                                    or reading articles about scientific discoveries or trends in tech. My passion for 
-                                    technology sparked during my primary school years when my cousins and I played console games. 
-                                    However, programming comes during my junior high school in a single 
-                                    laboratory which is adding two integers and I’ve loved it ever since.</p>
+                                    or reading articles about scientific discoveries or trends in tech. Other than that, 
+                                    I also love cooking and going for a walk, jogging, swimming, and cycling. 
+                                    My passion for technology sparked when my cousins and I played console games during my 
+                                    primary school years. However, programming comes during my junior high school in a single 
+                                    laboratory which is adding two integers. Since then I aspire to be a software engineer/developer 
+                                    and aim to be part of big tech companies.
+                                </p>
 
-
-                                <blockquote className=" italic text-center mt-5 font-mono">
-                                    "I did not choose tech, tech chose me."
-                                </blockquote>
                             </article>
                             <img src={my_photo} alt="my_photo" className={"col-span-1 rounded-md"  + show_border}/>
                         </div>

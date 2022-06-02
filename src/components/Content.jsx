@@ -1,12 +1,9 @@
 import "../App.css";
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {StyleRoot} from 'radium';
 import {animationFadeInLeft, animationFadeInUp, animationFadeIn} from '../constants/Animations';
-import ExperienceSection from "./sections/Experiences";
-import AboutSection from "./sections/About";
-import IntroductionSection from "./sections/Introduction";
-import ProjectsSection from "./sections/Projects";
+
 import { LoremGenerateSetences } from "../constants/Util";
 import { Link } from "react-scroll";
 // list of companies I worked
@@ -74,7 +71,13 @@ const projects = [
             "Woombat"
         ],
     },
-]
+];
+
+const LazyIntroductionSection = React.lazy(() => import('./sections/Introduction'));
+const LazyAboutSection = React.lazy(() => import('./sections/About'));
+const LazyExperienceSection = React.lazy(() => import('./sections/Experiences'));
+const LazyProjectsSection = React.lazy(() => import('./sections/Projects'));
+const LazyMoreSection = React.lazy(() => import('./sections/More'));
 
 function ScrollUp(){
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -138,10 +141,14 @@ class ContentPage extends React.Component{
                     </aside>
                     <ScrollUp />
                 </StyleRoot>
-                <IntroductionSection debug={false}/>
-                <AboutSection debug={false}/>
-                <ExperienceSection workExperience={list_companies} debug={false}/>
-                <ProjectsSection debug={false} projects={projects}/>
+                <Suspense fallback={<div>Loading...</div>}>
+                    <LazyIntroductionSection debug={false}/>
+                    <LazyAboutSection debug={false}/>
+                    <LazyExperienceSection workExperience={list_companies} debug={false}/>
+                    <LazyProjectsSection debug={false} projects={projects}/>
+                    <LazyMoreSection debug={false}/>
+                </Suspense>
+                
             </section>
         )
     }

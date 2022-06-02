@@ -72,7 +72,7 @@ class Header extends Component{
                         ><span className=" text-green-400">03.</span> Projects</Link>
 
                         <Link
-                            to="#"
+                            to="more"
                             smooth={true}
                             className="hover:text-green-500 cursor-pointer text-white"
                         ><span className=" text-green-400">04.</span> More</Link>
@@ -106,7 +106,7 @@ class Header extends Component{
                             ><span className=" text-green-400">03.</span> Projects</Link>
 
                             <Link
-                                to="#"
+                                to="more"
                                 smooth={true}
                                 className="hover:text-green-500 cursor-pointer"
                             ><span className=" text-green-400">04.</span> More</Link>
